@@ -1,3 +1,7 @@
+body-color = #333333
+accent-color = #ff0000
+bg-color = #FBFBFD
+
 html
   box-sizing border-box
 
@@ -7,7 +11,9 @@ html
   box-sizing inherit
 
 body
-  font-family -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-family "Open Sans", sans-serif
+  color body-color
+  background-color bg-color
 
 
 :disabled, [disabled], [aria-disabled="true"]
@@ -22,16 +28,26 @@ a
   -webkit-text-decoration-skip: ink
   text-decoration-skip: ink
 
-.visuallyhidden:not(:focus):not(:active)
-  position: absolute
-  width: 1px
-  height: 1px
-  margin: -1px
-  border: 0
-  padding: 0
-  clip-path: inset(100%)
-  clip: rect(0 0 0 0)
-  overflow: hidden
-
 .svg-sprite
   display none
+
+.title
+  width 100%
+  font-family "Merriweather"
+  font-weight 400
+  line-height 1.4
+
+  span
+    display inline-block
+    position relative
+
+    &::before
+      content ''
+      width calc(100% + 24px)
+      height 20px
+      position absolute
+      left -16px
+      bottom 0
+      background-color #EAEAF2
+      z-index -1
+
