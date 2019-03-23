@@ -1,25 +1,21 @@
 .header
-  padding 40px
-  display flex
-  flex-direction column
-  justify-content center
-  align-items center
+  padding 40px 0
   overflow hidden
 
   &__logo
-    width 40vw
-    margin-bottom 80px
+    margin-bottom 40px
 
-  &__title
-    font-size 50px
+  &__titles
+    text-align center
 
     +above(1200px)
-      font-size 80px
+      text-align left
 
-    &:nth-child(3)
-      margin-top 24px
-      position relative
-      left calc((100% - 40px) / 6)
+    .title:nth-child(2)
+      margin-top 40px
+
+      +above(1200px)
+        margin-top 0
 
 .bg
   position absolute

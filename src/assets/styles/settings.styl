@@ -11,18 +11,19 @@ html
   box-sizing inherit
 
 body
+  position relative
   font-family "Open Sans", sans-serif
   color body-color
   background-color bg-color
 
+.container
+  width 87.5%
+  max-width 1200px
+  margin 0 auto
+
 
 :disabled, [disabled], [aria-disabled="true"]
   cursor not-allowed
-
-.clearfix:after
-    content ""
-    display block
-    clear both
 
 a
   -webkit-text-decoration-skip: ink
@@ -32,10 +33,14 @@ a
   display none
 
 .title
-  width 100%
+  padding-left 16px
   font-family "Merriweather"
   font-weight 400
   line-height 1.4
+  font-size 40px
+
+  +above(1200px)
+      font-size 80px
 
   span
     display inline-block
