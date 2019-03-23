@@ -13,6 +13,7 @@ html
 body
   position relative
   font-family "Open Sans", sans-serif
+  line-height 1.4
   color body-color
   background-color bg-color
 
@@ -33,7 +34,7 @@ a
   display none
 
 .title
-  padding-left 16px
+  // padding-left 16px
   font-family "Merriweather"
   font-weight 400
   line-height 1.4
@@ -42,17 +43,29 @@ a
   +above(1200px)
       font-size 80px
 
-  span
-    display inline-block
-    position relative
+  // span
+  //   display inline-block
+  //   position relative
 
-    &::before
-      content ''
-      width calc(100% + 24px)
-      height 20px
-      position absolute
-      left -16px
-      bottom 0
-      background-color #EAEAF2
-      z-index -1
+  //   &::before
+  //     content ''
+  //     width calc(100% + 24px)
+  //     height 20px
+  //     position absolute
+  //     left -16px
+  //     bottom 0
+  //     background-color #EAEAF2
+  //     z-index -1
+
+.section
+  padding 100px 0
+
+  &__title
+    font-family "Merriweather"
+    font-weight 400
+    font-size 20px
+    text-align center
+
+    +above(1200px)
+      font-size 40px
 

@@ -1,5 +1,6 @@
 
 include ../blocks/header/header
+include ../blocks/main/main
 include ../blocks/footer/footer
 include ../blocks/scripts/scripts
 
@@ -8,7 +9,7 @@ html(lang='ru')
   include ../blocks/head/head
   body
     +header()
-    h1 New index
+    +main()
     +footer()
     block scripts
     +scripts(['build.js'])

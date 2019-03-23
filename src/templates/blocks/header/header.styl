@@ -1,12 +1,29 @@
 .header
-  padding 40px 0
+  padding 40px 0 0
   overflow hidden
 
   &__logo
     margin-bottom 40px
 
+  &__info
+    padding 40px 0
+    position relative
+    background-image url('../images/header.jpg')
+    background-size cover
+    background-position center
+    background-repeat no-repeat
+    color #fff
+
+    .bg
+      z-index: 1
+
+      &__line
+        background-color #fff
+
   &__titles
+    position relative
     text-align center
+    z-index 2
 
     +above(1200px)
       text-align left
@@ -15,7 +32,16 @@
       margin-top 40px
 
       +above(1200px)
-        margin-top 0
+        padding-left calc(100% / 6)
+
+  &__text
+    position relative
+    z-index 2
+    width 74%
+    margin 40px auto 0
+    font-family: Merriweather, sans-serif
+    font-size 30px
+    line-height 1.7
 
 .bg
   position absolute
@@ -34,6 +60,7 @@
     left 20px
     width 1px
     height 100%
+    animation scale 3s
 
     &:first-child
       left 20px
@@ -77,3 +104,11 @@
 
       +above(1200px)
         right calc((100% - 1200px) / 2)
+
+@keyframes scale
+  from
+    transform-origin  top
+    transform scaleY(0)
+  to
+    transform-origin  top
+    transform scaleY(1)
